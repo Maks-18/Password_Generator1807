@@ -10,11 +10,12 @@ public class Generator {
 
         String lower_cases = "qwertyuiopasdfghjklzxcvbnm";
         String upper_cases = "QWERTYUIOPASDFGHJKLZXCVBNM";
+        String special_symbols = " !/#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
         String password = "";
 
         for(int i = 0; i < digit; i++) {
-            int random = (int)(3 * Math.random());
+            int random = (int)(4 * Math.random());
 
             switch(random){
                 case 0:
@@ -28,6 +29,10 @@ public class Generator {
                     random = (int)(upper_cases.length() * Math.random());
                     password += String.valueOf(upper_cases.charAt(random));
                     break;
+                case 3:
+                    random = (int)(special_symbols.length() * Math.random());
+                    password += String.valueOf(special_symbols.charAt(random));
+
 
 
             }
